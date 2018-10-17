@@ -1,0 +1,33 @@
+{
+  "name": "Hackster.io Stalker",
+  "author": "Tejas Shah",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "description": "Check for previously submitted projects to current contests.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "https://www.hackster.io/contests/*",
+    "https://www.hackster.io/contests/*/projects"
+  ],
+  "content_scripts": [
+    {
+      "run_at" :"document_end",
+      "matches": [
+        "https://www.hackster.io/contests/*",
+        "https://www.hackster.io/contests/*/projects*"
+      ],
+      "exclude_matches": [
+        "https://www.hackster.io/contests",
+        "https://www.hackster.io/contests/"
+      ],
+      "js": [
+        "js/jquery-3.3.1.min.js",
+        "src/inject.js"
+      ]
+    }
+  ]
+}
