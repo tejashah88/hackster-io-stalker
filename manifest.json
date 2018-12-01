@@ -1,7 +1,7 @@
 {
   "name": "Hackster.io Stalker",
   "author": "Tejas Shah",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "manifest_version": 2,
   "description": "Check for previously submitted projects to current contests.",
   "icons": {
